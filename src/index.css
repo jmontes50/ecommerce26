@@ -1,0 +1,36 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/*
+h1 --> base
+.card --> components
+.bg-gradient-blue --> utilities
+*/
+
+@layer components {
+  /* podemos seguir utilizando las clases utilitarias de tailwind */
+  /* las utilizamos utilizando @apply */
+  .btn {
+    /* forma del boton */
+    @apply px-4 py-2 font-normal rounded-md;
+  }
+
+  .btn-primary {
+    @apply bg-slate-700 text-white hover:bg-slate-800 transition duration-300 dark:bg-slate-200 dark:text-black
+  }
+
+  .btn-secondary {
+    @apply bg-slate-400 text-black hover:bg-slate-600 transition duration-300 
+  }
+
+  .container {
+    @apply px-4 mx-auto lg:px-8 xl:max-w-7xl
+  }
+}
+
+/* leaflet trae un contenedor propio con la clase .leaflet-container */
+.leaflet-container {
+  height:100%;
+  width:100;
+}
